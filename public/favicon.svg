@@ -1,12 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <rect width="64" height="64" rx="14" fill="#3A5A40"/>
-  <text
-    x="32"
-    y="40"
-    text-anchor="middle"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="26"
-    font-weight="500"
-    fill="#DAD7CD"
-  >LC</text>
+  <path
+    d="M16 44 V30 L32 16 L48 30 V44"
+    stroke="#DAD7CD"
+    stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <path
+    d="M42 24 V16 H50"
+    stroke="#DAD7CD"
+    stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
 </svg>

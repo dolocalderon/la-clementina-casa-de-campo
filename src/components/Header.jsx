@@ -31,7 +31,7 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-site flex items-center justify-between px-5 py-4 md:px-10 lg:px-16">
+      <div className="container-site flex items-center justify-between gap-4 px-5 py-3.5 md:px-10 md:py-4 lg:px-16">
         <Logo light={!solid} />
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Principal">

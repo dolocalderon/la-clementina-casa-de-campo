@@ -1,11 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" fill="none" role="img" aria-label="La Clementina">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 90" fill="none" role="img" aria-label="La Clementina">
+  <path
+    d="M100 28 V18 L140 8 L180 18 V28"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <path
+    d="M164 16 V10 H172"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
   <text
-    x="0"
-    y="26"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="26"
-    font-weight="500"
-    letter-spacing="-0.02em"
+    x="140"
+    y="58"
+    text-anchor="middle"
+    font-family="'Great Vibes', Georgia, cursive"
+    font-size="36"
     fill="currentColor"
   >La Clementina</text>
+  <text
+    x="140"
+    y="78"
+    text-anchor="middle"
+    font-family="system-ui, sans-serif"
+    font-size="9"
+    letter-spacing="0.38em"
+    fill="currentColor"
+    opacity="0.7"
+  >CASA DE CAMPO</text>
 </svg>
