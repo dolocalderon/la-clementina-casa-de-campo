@@ -1,19 +1,17 @@
+import { Link } from 'react-router-dom'
+
 export default function Logo({ className = '', light = false, size = 'sm' }) {
-  const color = light ? 'text-white' : 'text-olive-900'
+  const color = light ? 'text-background' : 'text-olive-deep'
   const isLg = size === 'lg'
 
-  return (
-    <a
-      href="#inicio"
-      className={`inline-flex flex-col items-center leading-none ${color} ${className}`}
-      aria-label="La Clementina — inicio"
-    >
+  const inner = (
+    <>
       <svg
         viewBox="0 0 80 26"
         className={
           isLg
-            ? '-mb-5 ml-auto mr-[7%] h-6 w-16 self-end text-current md:mr-[8%] md:h-7 md:w-[4.5rem]'
-            : '-mb-1.5 ml-auto mr-[6%] h-4 w-12 self-end md:mr-[8%] md:h-[1.15rem] md:w-14'
+            ? '-mb-5 ml-auto mr-[7%] h-6 w-16 self-end md:mr-[8%] md:h-7 md:w-[4.5rem]'
+            : '-mb-1 ml-auto mr-[4%] h-3.5 w-10 self-end md:h-4 md:w-11'
         }
         fill="none"
         aria-hidden="true"
@@ -33,12 +31,11 @@ export default function Logo({ className = '', light = false, size = 'sm' }) {
           strokeLinecap="round"
         />
       </svg>
-
       <span
         className={
           isLg
             ? 'font-script text-[3.25rem] leading-none drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)] md:text-7xl'
-            : 'font-script text-[1.85rem] leading-[0.9] md:text-[2.15rem]'
+            : 'font-script text-[1.65rem] leading-[0.9] md:text-[1.85rem]'
         }
       >
         La Clementina
@@ -47,11 +44,31 @@ export default function Logo({ className = '', light = false, size = 'sm' }) {
         className={
           isLg
             ? 'mt-3 font-sans text-[0.7rem] font-medium tracking-[0.42em] uppercase opacity-85 md:text-xs'
-            : 'mt-2 font-sans text-[0.55rem] font-normal tracking-[0.42em] uppercase opacity-65 md:text-[0.6rem]'
+            : 'mt-1.5 font-sans text-[0.55rem] font-normal tracking-[0.3em] uppercase opacity-65'
         }
       >
         Casa de Campo
       </span>
-    </a>
+    </>
+  )
+
+  if (isLg) {
+    return (
+      <div
+        className={`inline-flex flex-col items-center leading-none ${color} ${className}`}
+      >
+        {inner}
+      </div>
+    )
+  }
+
+  return (
+    <Link
+      to="/"
+      className={`inline-flex flex-col items-start leading-none ${color} ${className}`}
+      aria-label="La Clementina — inicio"
+    >
+      {inner}
+    </Link>
   )
 }

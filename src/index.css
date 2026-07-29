@@ -1,22 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-olive-950: #344e41;
-  --color-olive-900: #3a5a40;
-  --color-olive-800: #3a5a40;
-  --color-olive-700: #588157;
-  --color-olive-600: #6b9470;
-  --color-olive-500: #7fa084;
-  --color-olive-400: #a3b18a;
-  --color-olive-300: #b8c4a4;
-  --color-olive-200: #c5cbb8;
-  --color-olive-100: #dad7cd;
-  --color-olive-50: #f0efe9;
-  --color-ink: #344e41;
-  --color-muted: #5a6b5e;
+  --color-background: #fcfbf8;
+  --color-foreground: #2a3228;
+  --color-olive: #4a6b45;
+  --color-olive-deep: #2f3f2c;
+  --color-primary: #4a6b45;
+  --color-primary-foreground: #fcfbf8;
+  --color-secondary: #e8eee3;
+  --color-muted: #f1f3ec;
+  --color-muted-foreground: #5c6858;
+  --color-border: #d8ddd4;
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-script: "Great Vibes", cursive;
-  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-sans: "Jost", system-ui, sans-serif;
 }
 
 @layer base {
@@ -27,8 +24,9 @@
   body {
     margin: 0;
     font-family: var(--font-sans);
-    color: var(--color-ink);
-    background: var(--color-olive-50);
+    font-weight: 400;
+    color: var(--color-foreground);
+    background: var(--color-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -43,38 +41,65 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 500;
-    color: var(--color-ink);
+    font-weight: 400;
+    color: var(--color-foreground);
   }
 
   ::selection {
-    background: var(--color-olive-200);
-    color: var(--color-ink);
+    background: var(--color-secondary);
+    color: var(--color-foreground);
   }
 }
 
 @layer components {
-  .section-pad {
-    @apply px-5 py-20 md:px-10 md:py-28 lg:px-16;
+  .container-site {
+    @apply mx-auto w-full max-w-6xl px-5 md:px-8;
   }
 
-  .container-site {
-    @apply mx-auto w-full max-w-6xl;
+  .section-pad {
+    @apply py-16 md:py-24;
   }
 
   .eyebrow {
-    @apply font-sans text-xs font-medium tracking-[0.22em] uppercase text-olive-700;
+    @apply font-sans text-[0.65rem] font-medium uppercase tracking-[0.36em] text-olive;
   }
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-olive-900 px-7 py-3.5 font-sans text-sm font-medium tracking-wide text-white transition hover:bg-olive-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive-900;
+  .page-hero {
+    @apply border-b border-border bg-secondary py-16 md:py-24;
+  }
+
+  .btn-solid {
+    @apply inline-flex items-center justify-center bg-background px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-olive-deep transition-opacity hover:opacity-90;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center border border-background/60 px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-background transition-colors hover:bg-background/10;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-full border border-white/80 bg-transparent px-7 py-3.5 font-sans text-sm font-medium tracking-wide text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+    @apply inline-flex items-center justify-center border border-olive px-5 py-2.5 font-sans text-xs uppercase tracking-[0.22em] text-olive transition-colors hover:bg-olive hover:text-primary-foreground;
   }
 
-  .btn-ghost {
-    @apply inline-flex items-center justify-center rounded-full border border-olive-900 px-7 py-3.5 font-sans text-sm font-medium tracking-wide text-olive-900 transition hover:bg-olive-900 hover:text-white;
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-olive px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-primary-foreground transition-opacity hover:opacity-90;
+  }
+
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center bg-background px-10 py-4 font-sans text-xs uppercase tracking-[0.28em] text-olive-deep transition-opacity hover:opacity-90;
+  }
+
+  .fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
