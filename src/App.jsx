@@ -1,32 +1,31 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
-import ScrollToTop from './components/ScrollToTop'
-import Home from './pages/Home'
-import Nosotros from './pages/Nosotros'
-import Servicios from './pages/Servicios'
-import Galeria from './pages/Galeria'
-import Contacto from './pages/Contacto'
+import Hero from './components/sections/Hero'
+import About from './components/sections/About'
+import Stats from './components/sections/Stats'
+import Services from './components/sections/Services'
+import Gallery from './components/sections/Gallery'
+import Capacity from './components/sections/Capacity'
+import CtaBand from './components/sections/CtaBand'
+import Contact from './components/sections/Contact'
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="flex min-h-svh flex-col">
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/nosotros" element={<Nosotros />} />
-            <Route path="/servicios" element={<Servicios />} />
-            <Route path="/galeria" element={<Galeria />} />
-            <Route path="/contacto" element={<Contacto />} />
-          </Routes>
-        </main>
-        <Footer />
-        <WhatsAppButton />
-      </div>
-    </BrowserRouter>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Stats />
+        <Services />
+        <Gallery />
+        <Capacity />
+        <CtaBand />
+        <Contact />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </>
   )
 }

@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #fcfbf8;
-  --color-foreground: #2a3228;
+  --color-background: #f7f6f1;
+  --color-foreground: #1c2419;
   --color-olive: #4a6b45;
-  --color-olive-deep: #2f3f2c;
+  --color-olive-deep: #243022;
   --color-primary: #4a6b45;
-  --color-primary-foreground: #fcfbf8;
-  --color-secondary: #e8eee3;
-  --color-muted: #f1f3ec;
-  --color-muted-foreground: #5c6858;
-  --color-border: #d8ddd4;
+  --color-primary-foreground: #f7f6f1;
+  --color-secondary: #e4ebe0;
+  --color-muted: #eef1ea;
+  --color-muted-foreground: #5a6556;
+  --color-border: #d2d9cc;
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-script: "Great Vibes", cursive;
   --font-sans: "Jost", system-ui, sans-serif;
@@ -24,30 +24,26 @@
   body {
     margin: 0;
     font-family: var(--font-sans);
-    font-weight: 400;
     color: var(--color-foreground);
     background: var(--color-background);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   #root {
     min-height: 100svh;
     width: 100%;
+    overflow-x: hidden;
   }
 
   h1,
   h2,
-  h3,
-  h4 {
+  h3 {
     font-family: var(--font-display);
     font-weight: 400;
-    color: var(--color-foreground);
   }
 
   ::selection {
     background: var(--color-secondary);
-    color: var(--color-foreground);
   }
 }
 
@@ -56,50 +52,23 @@
     @apply mx-auto w-full max-w-6xl px-5 md:px-8;
   }
 
-  .section-pad {
-    @apply py-16 md:py-24;
-  }
-
   .eyebrow {
     @apply font-sans text-[0.65rem] font-medium uppercase tracking-[0.36em] text-olive;
   }
 
-  .page-hero {
-    @apply border-b border-border bg-secondary py-16 md:py-24;
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-olive px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-primary-foreground transition duration-300 hover:bg-olive-deep;
   }
 
   .btn-solid {
-    @apply inline-flex items-center justify-center bg-background px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-olive-deep transition-opacity hover:opacity-90;
+    @apply inline-flex items-center justify-center bg-background px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-olive-deep transition duration-300 hover:bg-secondary;
   }
 
   .btn-outline-light {
-    @apply inline-flex items-center justify-center border border-background/60 px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-background transition-colors hover:bg-background/10;
+    @apply inline-flex items-center justify-center border border-white/50 px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-white transition duration-300 hover:bg-white/10;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center border border-olive px-5 py-2.5 font-sans text-xs uppercase tracking-[0.22em] text-olive transition-colors hover:bg-olive hover:text-primary-foreground;
-  }
-
-  .btn-primary {
-    @apply inline-flex items-center justify-center bg-olive px-8 py-4 font-sans text-xs uppercase tracking-[0.28em] text-primary-foreground transition-opacity hover:opacity-90;
-  }
-
-  .btn-ghost-dark {
-    @apply inline-flex items-center justify-center bg-background px-10 py-4 font-sans text-xs uppercase tracking-[0.28em] text-olive-deep transition-opacity hover:opacity-90;
-  }
-
-  .fade-up {
-    animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    @apply inline-flex items-center justify-center border border-olive px-5 py-2.5 font-sans text-xs uppercase tracking-[0.22em] text-olive transition duration-300 hover:bg-olive hover:text-primary-foreground;
   }
 }
