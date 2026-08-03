@@ -28,9 +28,10 @@ export const site = {
 
 export const navLinks = [
   { label: 'Inicio', href: '#inicio' },
-  { label: 'Galería', href: '#galeria' },
+  { label: 'Nosotros', href: '#nosotros' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Reseñas', href: '#resenas' },
+  { label: 'Galería', href: '#galeria' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
@@ -47,6 +48,30 @@ export const hero = {
     'Mesas largas servidas bajo un árbol centenario al atardecer en La Clementina',
   // Set to a video URL/import when available; hero will prefer video over image.
   video: null,
+}
+
+export const about = {
+  eyebrow: 'Nosotros',
+  title: 'Tres generaciones cuidando el mismo campo',
+  body: 'La Clementina nació como casco de estancia en 1928. Hoy, restaurada y con el parque original intacto, recibe eventos donde el paisaje es el protagonista y el equipo se ocupa del resto.',
+  body2:
+    'Trabajamos con un solo evento por jornada para que el campo sea enteramente tuyo, y acompañamos desde la primera visita hasta el último brindis.',
+  image: casaImg,
+  imageAlt: 'Casco de la estancia La Clementina rodeado de olivos y jardines',
+  principles: [
+    {
+      title: 'Un evento por día',
+      description: 'La casa, el parque y el equipo son solo tuyos durante toda la jornada.',
+    },
+    {
+      title: 'Equipo propio',
+      description: 'Coordinación y logística en casa. No tercerizamos lo esencial.',
+    },
+    {
+      title: 'Paisaje intacto',
+      description: 'Arboleda original, olivos y aromáticas. Menos decoración, más naturaleza.',
+    },
+  ],
 }
 
 export const gallery = {

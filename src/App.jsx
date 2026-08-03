@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import Hero from './components/sections/Hero'
+import About from './components/sections/About'
 import Gallery from './components/sections/Gallery'
 import Services from './components/sections/Services'
 import Testimonials from './components/sections/Testimonials'
@@ -14,9 +15,10 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Gallery />
+        <About />
         <Services />
         <Testimonials />
+        <Gallery />
         <CtaBand />
         <Contact />
       </main>
