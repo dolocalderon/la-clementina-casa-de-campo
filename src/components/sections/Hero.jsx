@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { HiOutlineChevronDown } from 'react-icons/hi'
-import { hero } from '../../data/content'
+import { hero, site } from '../../data/content'
 
 export default function Hero() {
   const ref = useRef(null)
@@ -20,14 +20,28 @@ export default function Hero() {
       className="relative flex h-[100svh] min-h-[620px] items-end overflow-hidden md:items-center"
     >
       <motion.div style={{ y, scale }} className="absolute inset-0">
-        <img
-          src={hero.image}
-          alt={hero.imageAlt}
-          className="h-full w-full object-cover object-center"
-          fetchPriority="high"
-        />
+        {hero.video ? (
+          <video
+            className="h-full w-full object-cover object-center"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={hero.image}
+            aria-label={hero.imageAlt}
+          >
+            <source src={hero.video} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={hero.image}
+            alt={hero.imageAlt}
+            className="h-full w-full object-cover object-center"
+            fetchPriority="high"
+          />
+        )}
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-t from-olive-deep via-olive-deep/55 to-olive-deep/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-olive-deep via-olive-deep/55 to-olive-deep/20" />
 
       <motion.div
         style={{ opacity }}
@@ -37,17 +51,25 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-2xl"
+          className="max-w-3xl"
         >
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-[0.65rem] uppercase tracking-[0.4em] text-white/75"
+            transition={{ delay: 0.15, duration: 0.7 }}
+            className="font-script text-4xl text-gold md:text-5xl"
+          >
+            {hero.brand || site.name}
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25, duration: 0.7 }}
+            className="mt-3 text-[0.65rem] uppercase tracking-[0.4em] text-white/70"
           >
             {hero.eyebrow}
           </motion.p>
-          <h1 className="mt-5 font-display text-5xl leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-[5.2rem]">
+          <h1 className="mt-5 font-display text-5xl leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-[5rem]">
             {hero.title}
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-white/85 md:text-lg">
@@ -65,8 +87,8 @@ export default function Hero() {
       </motion.div>
 
       <motion.a
-        href="#nosotros"
-        aria-label="Bajar a Nosotros"
+        href="#galeria"
+        aria-label="Bajar a la galería"
         className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white/70"
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}

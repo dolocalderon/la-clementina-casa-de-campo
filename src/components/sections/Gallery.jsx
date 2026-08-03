@@ -26,34 +26,31 @@ export default function Gallery() {
         </Reveal>
 
         <RevealStagger
-          className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-16 grid auto-rows-[minmax(220px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[minmax(260px,auto)]"
           delay={0.05}
         >
-          {gallery.items.map((item, i) => (
-            <RevealItem
-              key={item.id}
-              className={i === 0 || i === 5 ? 'sm:col-span-2 lg:col-span-1' : ''}
-            >
+          {gallery.items.map((item) => (
+            <RevealItem key={item.id} className={item.span}>
               <button
                 type="button"
                 onClick={() => setActive(item)}
-                className="group relative block w-full overflow-hidden text-left"
+                className="group relative block h-full min-h-[220px] w-full overflow-hidden text-left"
               >
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className={`w-full object-cover transition duration-700 group-hover:scale-105 ${
-                    i % 3 === 1 ? 'aspect-[3/4]' : 'aspect-[4/3]'
-                  }`}
+                  className={`h-full w-full object-cover transition duration-700 group-hover:scale-105 ${item.aspect}`}
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-olive-deep/80 via-transparent to-transparent opacity-80 transition group-hover:opacity-95" />
-                <div className="absolute inset-x-0 bottom-0 p-5 translate-y-2 transition duration-500 group-hover:translate-y-0">
-                  <p className="text-[0.6rem] uppercase tracking-[0.24em] text-white/70">
+                <div className="absolute inset-0 bg-gradient-to-t from-olive-deep/85 via-olive-deep/10 to-transparent opacity-90 transition duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                  <p className="text-[0.6rem] uppercase tracking-[0.28em] text-gold">
                     {item.category}
                   </p>
-                  <h3 className="mt-1 font-display text-2xl text-white">{item.title}</h3>
-                  <p className="text-sm text-white/70">{item.meta}</p>
+                  <h3 className="mt-1 font-display text-2xl text-white md:text-3xl">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-white/70">{item.meta}</p>
                 </div>
               </button>
             </RevealItem>
