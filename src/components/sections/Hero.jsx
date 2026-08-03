@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { HiOutlineChevronDown } from 'react-icons/hi'
-import { hero, site } from '../../data/content'
+import { hero } from '../../data/content'
 
 export default function Hero() {
   const ref = useRef(null)
@@ -53,23 +53,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl"
         >
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.7 }}
-            className="font-script text-4xl text-gold md:text-5xl"
-          >
-            {hero.brand || site.name}
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25, duration: 0.7 }}
-            className="mt-3 text-[0.65rem] uppercase tracking-[0.4em] text-white/70"
-          >
-            {hero.eyebrow}
-          </motion.p>
-          <h1 className="mt-5 font-display text-5xl leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-[5rem]">
+          <h1 className="font-display text-5xl leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-[5rem]">
             {hero.title}
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-white/85 md:text-lg">
