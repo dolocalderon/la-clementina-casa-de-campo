@@ -3,7 +3,7 @@ import Reveal, { RevealItem, RevealStagger } from '../Reveal'
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-secondary/50 py-24 md:py-32">
+    <section id="servicios" className="bg-secondary/50 pt-12 pb-24 md:pt-14 md:pb-28">
       <div className="container-site">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">{services.eyebrow}</p>
@@ -40,7 +40,7 @@ export default function Services() {
               ) : (
                 <article className="group flex h-full min-h-[200px] flex-col justify-between border border-border bg-background p-7 transition duration-500 hover:border-gold/50 hover:shadow-[0_0_40px_-18px_rgba(196,165,116,0.55)] md:p-8">
                   <div>
-                    <p className="font-display text-4xl text-olive md:text-5xl">
+                    <p className="font-display text-3xl leading-tight text-olive md:text-4xl">
                       {item.accent}
                     </p>
                     <p className="mt-1 text-[0.65rem] uppercase tracking-[0.24em] text-gold">

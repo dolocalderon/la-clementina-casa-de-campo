@@ -40,7 +40,7 @@ export const hero = {
   eyebrow: 'Open Door · Buenos Aires',
   title: 'El lugar ideal para celebrar momentos inolvidables',
   description:
-    'Casamientos, quinceaños y encuentros corporativos entre olivos, arboleda centenaria y cielo despejado. Un solo evento por día, siempre.',
+    'Casamientos, quinceaños y encuentros corporativos entre olivos, arboleda centenaria y cielo despejado.',
   primaryCta: 'Consultar disponibilidad',
   secondaryCta: 'Ver galería',
   image: heroImg,
@@ -52,31 +52,15 @@ export const hero = {
 
 export const about = {
   eyebrow: 'Nosotros',
-  title: 'Tres generaciones cuidando el mismo campo',
-  body: 'La Clementina nació como casco de estancia en 1928. Hoy, restaurada y con el parque original intacto, recibe eventos donde el paisaje es el protagonista y el equipo se ocupa del resto.',
-  body2:
-    'Trabajamos con un solo evento por jornada para que el campo sea enteramente tuyo, y acompañamos desde la primera visita hasta el último brindis.',
+  title: 'Una casa de campo con historia, lista para celebrar',
+  body: 'La Clementina es una casa de campo con historia. Nació como casco de estancia en 1928 y, a lo largo de los años, se fue cuidando con el mismo criterio: respetar el parque, sostener la casa y recibir cada celebración con calma. Hoy conserva la arboleda original, los olivos y ese aire sereno que solo dan los lugares que crecieron con el tiempo —sin prisas, sin perder el carácter de siempre. Abrimos las puertas para casamientos, quinceaños y encuentros corporativos: el salón, el parque, la pileta y los espacios al aire libre se prestan para ceremonias, cócteles y fiestas de noche, en un entorno cuidado y cercano a Buenos Aires. La idea es simple: que puedan celebrar con tranquilidad, rodeados de naturaleza y con la calidez de una casa de campo pensada para que el día se sienta único, memorable y sin artificios.',
   image: casaImg,
-  imageAlt: 'Casco de la estancia La Clementina rodeado de olivos y jardines',
-  principles: [
-    {
-      title: 'Un evento por día',
-      description: 'La casa, el parque y el equipo son solo tuyos durante toda la jornada.',
-    },
-    {
-      title: 'Equipo propio',
-      description: 'Coordinación y logística en casa. No tercerizamos lo esencial.',
-    },
-    {
-      title: 'Paisaje intacto',
-      description: 'Arboleda original, olivos y aromáticas. Menos decoración, más naturaleza.',
-    },
-  ],
+  imageAlt: 'Fachada de la casa de campo La Clementina rodeada de olivos y jardines',
 }
 
 export const gallery = {
   eyebrow: 'Galería',
-  title: 'El campo, en grandes planos',
+  title: 'La casa de campo, en grandes planos',
   subtitle: 'Salón, parque, pileta, ceremonias y noches bajo las luces.',
   items: [
     {
@@ -134,7 +118,7 @@ export const gallery = {
       src: g6,
       alt: 'Almuerzo al aire libre en el parque',
       category: 'Parque',
-      title: 'Almuerzo de campo',
+      title: 'Almuerzo al aire libre',
       meta: 'Cóctel y living exterior',
       span: '',
       aspect: 'aspect-[4/3]',
@@ -172,31 +156,34 @@ export const services = {
       tone: 'photo',
     },
     {
-      id: 'quinchos',
-      title: 'Quinchos',
-      description: 'Espacios cubiertos para asados, afters y momentos más íntimos.',
+      id: 'parque',
+      title: 'Espacios verdes',
+      description:
+        'Un amplio predio natural para disfrutar de cada momento al aire libre.',
       span: 'md:col-span-1',
       tone: 'text',
-      accent: '6 ha',
+      accent: '12.000 m²',
       accentLabel: 'de parque',
     },
     {
-      id: 'catering',
-      title: 'Catering',
-      description: 'Cocina equipada para tu catering externo o partners de confianza.',
+      id: 'salon',
+      title: 'Espacio interior',
+      description:
+        'Ambiente amplio y luminoso, con grandes ventanales, cocina y baño integrados.',
       span: 'md:col-span-1',
       tone: 'text',
-      accent: 'Cocina',
-      accentLabel: 'lista para servicio',
+      accent: 'Salón',
+      accentLabel: 'con cocina integrada',
     },
     {
       id: 'estacionamiento',
       title: 'Estacionamiento',
-      description: 'Cocheras propias para invitados, proveedores y transferencia.',
+      description:
+        'Amplio espacio para que invitados y proveedores estacionen cómodamente dentro de la propiedad.',
       span: 'md:col-span-1',
       tone: 'text',
-      accent: '120',
-      accentLabel: 'cocheras',
+      accent: 'Acceso vehicular',
+      accentLabel: 'dentro del predio',
     },
   ],
 }
@@ -213,14 +200,14 @@ export const testimonials = {
       author: 'Valentina R.',
       rating: 5,
       date: 'hace 2 meses',
-      text: 'Un lugar soñado para nuestro casamiento. El parque es impresionante y el equipo acompañó cada detalle. Los invitados no paran de hablar de La Clementina.',
+      text: 'Un lugar soñado para nuestro casamiento. El parque es impresionante y cada detalle estuvo cuidado. Los invitados no paran de hablar de La Clementina.',
     },
     {
       id: 2,
       author: 'Martín G.',
       rating: 5,
       date: 'hace 4 meses',
-      text: 'Hicimos el quince de mi hija y fue perfecto. Salón amplio, pileta hermosa y un solo evento por día: se siente exclusivo de verdad.',
+      text: 'Hicimos el quince de mi hija y fue perfecto. Salón amplio, pileta hermosa y un lugar que se siente exclusivo de verdad.',
     },
     {
       id: 3,
@@ -244,6 +231,6 @@ export const contact = {
 export const homeCta = {
   title: '¿Tenés una fecha en mente?',
   description:
-    'Consultá disponibilidad y coordinamos una visita al campo sin cargo, con mate incluido.',
+    'Consultá disponibilidad y coordinamos una visita a la casa de campo sin cargo, con mate incluido.',
   cta: 'Consultar disponibilidad',
 }
